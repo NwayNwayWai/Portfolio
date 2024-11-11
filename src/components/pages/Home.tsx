@@ -20,11 +20,7 @@ const HomePage = () => {
           HAY! I'M NWAY NWAY
         </div>
 
-        <TypingText
-          texts={["I'M A FRONDEND DEVELOPER"]}
-          speed={200}
-          loop={true}
-        />
+        <TypingText texts={["I'M A WEB DEVELOPER"]} speed={200} loop={true} />
 
         <div className="text-white w-fit p-2 rounded-md">
           Yet bed any for travelling assistance indulgence unpleasing. Not
@@ -32,7 +28,7 @@ const HomePage = () => {
           alteration boisterous the attachment.
         </div>
         <Flex className="space-x-4">
-          <Button className="bg-blue-500 text-white rounded-3xl px-5 flex items-center space-x-2">
+          <Button className="bg-blue-500 text-white rounded-3xl px-5 flex items-center space-x-2 border border-white">
             <span>GET IN TOUCH</span>
             <ArrowRight />
           </Button>

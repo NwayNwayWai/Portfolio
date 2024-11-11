@@ -54,7 +54,7 @@ const AboutMePage = () => {
           </Flex>
         </Flex>
         <Box className="pt-4">
-          <Button className="bg-blue-500 text-white rounded-3xl px-5 flex items-center space-x-2 ">
+          <Button className="bg-blue-500 text-white rounded-3xl px-5 flex items-center space-x-2 border border-white">
             <span>GET IN TOUCH</span>
             <ArrowRight />
           </Button>

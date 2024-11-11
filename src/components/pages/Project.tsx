@@ -13,7 +13,7 @@ import {
 
 const ProjectPage = () => {
   return (
-    <Flex className="h-full p-3 flex-col ml-20">
+    <Flex className="h-full p-6 flex-col ml-20 bg-[#0788FF] bg-opacity-20 w-full">
       <Box className="bg-[#0788FF] bg-opacity-20 text-white w-fit p-2 rounded-md h-fit">
         MY WORK
       </Box>
