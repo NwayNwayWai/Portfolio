@@ -1,45 +1,92 @@
-import { Box, Flex } from "@radix-ui/themes";
+"use client";
 import React from "react";
-import { Button } from "../ui/button";
+import { motion } from "framer-motion";
+import { FaBriefcase, FaCalendar, FaBuilding } from "react-icons/fa";
+import { resumeData } from "@/data/resume";
 
 const ExperiencePage = () => {
   return (
-    <Box className="mt-10 h-full ml-20 space-y-3">
-      <Box className="bg-[#0788FF] bg-opacity-20 text-white w-fit p-2 rounded-md h-fit ">
-        EXPERIENCE
-      </Box>
-      <Box className="text-4xl font-semibold text-white w-fit rounded-md h-fit">
-        MY WORK <span className="text-blue-500">EXPERIENCE </span>
-      </Box>
-      <Box className="w-full h-[250px] pr-10 pt-8">
-        <Flex className="w-full h-[240px] p-5 bg-[#0788FF] bg-opacity-20 rounded-lg space-x-3 ">
-          <Box className="bg-blue-500 h-[200px] w-1/2 space-y-3 p-4 rounded-lg">
-            <div className="text-white text-2xl font-semibold">
-              Front-end Developer
-            </div>
-            <div>
-              <div className="text-gray-50 text-[13px]">WELAB | REMOTE</div>
-              <div className="text-white text-[16px]">JAN 2019 - PRESENT</div>
-            </div>
-            <Button className="rounded-3xl bg-white text-black text-xs font-semibold h-8">
-              {"FULL TIME "}
-            </Button>
-          </Box>
-          <div className="pl-3">
-            <div className="text-3xl font-bold text-white">About Company</div>
-            <div className="text-base text-white pt-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation.
-            </div>
-          </div>
-        </Flex>
-      </Box>
-    </Box>
+    <div className="min-h-screen py-20 px-4 bg-gradient-to-b from-[#0F172A] to-[#1E293B]">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative">
+        {/* Page Title */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <span className="inline-block px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium mb-4">
+            My Journey
+          </span>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Work Experience
+          </h1>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            A timeline of my professional experience and growth as a developer
+          </p>
+        </motion.div>
+
+        {/* Experience Timeline */}
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-blue-500/20" />
+
+          {resumeData.workExperience.map((exp, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`relative mb-12 ${
+                index % 2 === 0 ? 'md:pr-12 md:ml-auto md:w-1/2' : 'md:pl-12 md:w-1/2'
+              }`}
+            >
+              {/* Timeline dot */}
+              <div className="absolute left-[-8px] md:left-auto md:right-[-8px] w-4 h-4 bg-blue-500 rounded-full transform md:translate-x-1/2">
+                <div className="absolute inset-0 bg-blue-500 rounded-full animate-ping opacity-25" />
+              </div>
+
+              {/* Experience Card */}
+              <div className="ml-8 md:ml-0 bg-[#1E293B]/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-blue-500/20 transition-all duration-300 hover:-translate-y-1">
+                <div className="flex flex-wrap items-center gap-4 mb-4">
+                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium">
+                    <FaCalendar className="text-blue-500" />
+                    {exp.period}
+                  </span>
+                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium">
+                    <FaBuilding className="text-purple-500" />
+                    {exp.company}
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-3">{exp.position}</h3>
+                <p className="text-gray-400 leading-relaxed whitespace-pre-line mb-4">
+                  {exp.description}
+                </p>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {exp.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-3 py-1 bg-blue-500/5 text-blue-400 rounded-full text-sm font-medium border border-blue-500/10"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 

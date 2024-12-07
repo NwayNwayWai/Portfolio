@@ -12,6 +12,11 @@
   resolved "https://registry.npmjs.org/@camwiegert/typical/-/typical-0.1.1.tgz"
   integrity sha512-4xAtH3F3uJ8boe9IPahdYFCBELmyOBwHGAn0rDO6C1rx0TuZb5f4UqfuiOQF7YiMJGCOsUIW7LyucMNnVQYsRg==
 
+"@emailjs/browser@^4.4.1":
+  version "4.4.1"
+  resolved "https://registry.npmjs.org/@emailjs/browser/-/browser-4.4.1.tgz"
+  integrity sha512-DGSlP9sPvyFba3to2A50kDtZ+pXVp/0rhmqs2LmbMS3I5J8FSOgLwzY2Xb4qfKlOVHh29EAutLYwe5yuEZmEFg==
+
 "@emnapi/runtime@^1.2.0":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@emnapi/runtime/-/runtime-1.3.1.tgz#0fcaa575afc31f455fd33534c19381cfce6c6f60"
@@ -78,35 +83,35 @@
   resolved "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.8.tgz"
   integrity sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==
 
-"@fortawesome/fontawesome-common-types@6.6.0":
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.6.0.tgz#31ab07ca6a06358c5de4d295d4711b675006163f"
-  integrity sha512-xyX0X9mc0kyz9plIyryrRbl7ngsA9jz77mCZJsUkLl+ZKs0KWObgaEBoSgQiYWAsSmjz/yjl0F++Got0Mdp4Rw==
+"@fortawesome/fontawesome-common-types@6.7.1":
+  version "6.7.1"
+  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.7.1.tgz"
+  integrity sha512-gbDz3TwRrIPT3i0cDfujhshnXO9z03IT1UKRIVi/VEjpNHtSBIP2o5XSm+e816FzzCFEzAxPw09Z13n20PaQJQ==
 
 "@fortawesome/fontawesome-svg-core@^6.6.0":
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.6.0.tgz#2a24c32ef92136e98eae2ff334a27145188295ff"
-  integrity sha512-KHwPkCk6oRT4HADE7smhfsKudt9N/9lm6EJ5BVg0tD1yPA5hht837fB87F8pn15D8JfTqQOjhKTktwmLMiD7Kg==
+  version "6.7.1"
+  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.7.1.tgz"
+  integrity sha512-8dBIHbfsKlCk2jHQ9PoRBg2Z+4TwyE3vZICSnoDlnsHA6SiMlTwfmW6yX0lHsRmWJugkeb92sA0hZdkXJhuz+g==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "6.6.0"
+    "@fortawesome/fontawesome-common-types" "6.7.1"
 
 "@fortawesome/free-solid-svg-icons@^6.6.0":
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.6.0.tgz#061751ca43be4c4d814f0adbda8f006164ec9f3b"
-  integrity sha512-IYv/2skhEDFc2WGUcqvFJkeK39Q+HyPf5GHUrT/l2pKbtgEIv1al1TKd6qStR5OIwQdN1GZP54ci3y4mroJWjA==
+  version "6.7.1"
+  resolved "https://registry.npmjs.org/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.7.1.tgz"
+  integrity sha512-BTKc0b0mgjWZ2UDKVgmwaE0qt0cZs6ITcDgjrti5f/ki7aF5zs+N91V6hitGo3TItCFtnKg6cUVGdTmBFICFRg==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "6.6.0"
+    "@fortawesome/fontawesome-common-types" "6.7.1"
 
 "@fortawesome/react-fontawesome@^0.2.2":
   version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.2.2.tgz#68b058f9132b46c8599875f6a636dad231af78d4"
+  resolved "https://registry.npmjs.org/@fortawesome/react-fontawesome/-/react-fontawesome-0.2.2.tgz"
   integrity sha512-EnkrprPNqI6SXJl//m29hpaNzOp1bruISWaOiRtkMi/xSvHJlzc2j2JAYS7egxt/EbjSNV/k6Xy0AQI6vB2+1g==
   dependencies:
     prop-types "^15.8.1"
 
 "@hookform/resolvers@^3.9.1":
   version "3.9.1"
-  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-3.9.1.tgz#a23883c40bfd449cb6c6ab5a0fa0729184c950ff"
+  resolved "https://registry.npmjs.org/@hookform/resolvers/-/resolvers-3.9.1.tgz"
   integrity sha512-ud2HqmGBM0P0IABqoskKWI6PEf6ZDDBZkFqe2Vnl+mTHCEHzr3ISjjZyCwTjC/qpL25JC9aIDkloQejvMeq0ug==
 
 "@humanwhocodes/config-array@^0.13.0":
@@ -564,7 +569,7 @@
 
 "@radix-ui/react-label@^2.1.0":
   version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@radix-ui/react-label/-/react-label-2.1.0.tgz#3aa2418d70bb242be37c51ff5e51a2adcbc372e3"
+  resolved "https://registry.npmjs.org/@radix-ui/react-label/-/react-label-2.1.0.tgz"
   integrity sha512-peLblDlFw/ngk3UWq0VnYaOLy6agTZZ+MUO/WhVfm14vJGML+xH4FAl2XQGLqdefjNb7ApRg6Yn7U42ZhmYXdw==
   dependencies:
     "@radix-ui/react-primitive" "2.0.0"
@@ -807,7 +812,7 @@
 
 "@radix-ui/react-toast@^1.2.2":
   version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@radix-ui/react-toast/-/react-toast-1.2.2.tgz#fdd8ed0b80f47d6631dfd90278fee6debc06bf33"
+  resolved "https://registry.npmjs.org/@radix-ui/react-toast/-/react-toast-1.2.2.tgz"
   integrity sha512-Z6pqSzmAP/bFJoqMAston4eSNa+ud44NSZTiZUmUen+IOZ5nBY8kzuU5WDBVyFXPtcW6yUalOHsxM/BP6Sv8ww==
   dependencies:
     "@radix-ui/primitive" "1.1.0"
@@ -985,12 +990,19 @@
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
-"@types/node@^20":
+"@types/node@*", "@types/node@^20":
   version "20.17.6"
   resolved "https://registry.npmjs.org/@types/node/-/node-20.17.6.tgz"
   integrity sha512-VEI7OdvK2wP7XHnsuXbAJnEpEkF6NjSN45QJlL4VGqZSXsnicpesdTWsg9RISeSdYd3yeRj/y3k5KGjUXYnFwQ==
   dependencies:
     undici-types "~6.19.2"
+
+"@types/nodemailer@^6.4.17":
+  version "6.4.17"
+  resolved "https://registry.npmjs.org/@types/nodemailer/-/nodemailer-6.4.17.tgz"
+  integrity sha512-I9CCaIp6DTldEg7vyUTZi8+9Vo0hi1/T8gv3C89yk1rSAAzoKQ8H8ki/jBYJSFoH/BisgLP8tkZMlQ91CIquww==
+  dependencies:
+    "@types/node" "*"
 
 "@types/prop-types@*":
   version "15.7.13"
@@ -1004,6 +1016,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-scroll@^1.8.10":
+  version "1.8.10"
+  resolved "https://registry.npmjs.org/@types/react-scroll/-/react-scroll-1.8.10.tgz"
+  integrity sha512-RD4Z7grbdNGOKwKnUBKar6zNxqaW3n8m9QSrfvljW+gmkj1GArb8AFBomVr6xMOgHPD3v1uV3BrIf01py57daQ==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^18":
   version "18.3.12"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.3.12.tgz"
@@ -1014,7 +1033,7 @@
 
 "@types/typed.js@^2.0.9":
   version "2.0.9"
-  resolved "https://registry.yarnpkg.com/@types/typed.js/-/typed.js-2.0.9.tgz#f7f9dcd1eab150dd696931015b81f3125dd25838"
+  resolved "https://registry.npmjs.org/@types/typed.js/-/typed.js-2.0.9.tgz"
   integrity sha512-3dbzeNES/FpuafOHkp0K9MAr/oDI+2ehjt7Nco0thgGq8Om4kpubqPFTQinP6qVTlAHsrX7g5IGckx1tUejw2g==
   dependencies:
     typed.js "*"
@@ -1574,22 +1593,22 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 embla-carousel-react@^8.3.1:
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-8.3.1.tgz#f6d91f484b00704411524cf01feb80fdcff7dde2"
-  integrity sha512-gBY0zM+2ASvKFwRpTIOn2SLifFqOKKap9R/y0iCpJWS3bc8OHVEn2gAThGYl2uq0N+hu9aBiswffL++OYZOmDQ==
+  version "8.5.1"
+  resolved "https://registry.npmjs.org/embla-carousel-react/-/embla-carousel-react-8.5.1.tgz"
+  integrity sha512-z9Y0K84BJvhChXgqn2CFYbfEi6AwEr+FFVVKm/MqbTQ2zIzO1VQri6w67LcfpVF0AjbhwVMywDZqY4alYkjW5w==
   dependencies:
-    embla-carousel "8.3.1"
-    embla-carousel-reactive-utils "8.3.1"
+    embla-carousel "8.5.1"
+    embla-carousel-reactive-utils "8.5.1"
 
-embla-carousel-reactive-utils@8.3.1:
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.3.1.tgz#8e92407f92f55e5f38ef22d24c018077476f1e11"
-  integrity sha512-Js6rTTINNGnUGPu7l5kTcheoSbEnP5Ak2iX0G9uOoI8okTNLMzuWlEIpYFd1WP0Sq82FFcLkKM2oiO6jcElZ/Q==
+embla-carousel-reactive-utils@8.5.1:
+  version "8.5.1"
+  resolved "https://registry.npmjs.org/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.5.1.tgz"
+  integrity sha512-n7VSoGIiiDIc4MfXF3ZRTO59KDp820QDuyBDGlt5/65+lumPHxX2JLz0EZ23hZ4eg4vZGUXwMkYv02fw2JVo/A==
 
-embla-carousel@8.3.1:
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-8.3.1.tgz#8f5dcd0dc001977efd2bca54d620b6e6736a1a85"
-  integrity sha512-DutFjtEO586XptDn4cwvBJwsR/8fMa4jUk5Jk2g+/elKgu8mdn0Z2sx33g4JskvbLc1/6P8Xg4QlfELGJFcP5A==
+embla-carousel@8.5.1:
+  version "8.5.1"
+  resolved "https://registry.npmjs.org/embla-carousel/-/embla-carousel-8.5.1.tgz"
+  integrity sha512-JUb5+FOHobSiWQ2EJNaueCNT/cQU9L6XWBbWmorWPQT9bkbk+fhsuLr8wWrzXKagO3oWszBO7MSx+GfaRk4E6A==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -2036,6 +2055,15 @@ foreground-child@^3.1.0:
   dependencies:
     cross-spawn "^7.0.0"
     signal-exit "^4.0.1"
+
+framer-motion@^11.11.13, framer-motion@^11.13.1:
+  version "11.13.1"
+  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-11.13.1.tgz"
+  integrity sha512-F40tpGTHByhn9h3zdBQPcEro+pSLtzARcocbNqAyfBI+u9S+KZuHH/7O9+z+GEkoF3eqFxfvVw0eBDytohwqmQ==
+  dependencies:
+    motion-dom "^11.13.0"
+    motion-utils "^11.13.0"
+    tslib "^2.4.0"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -2584,6 +2612,11 @@ lodash.merge@^4.6.2:
   resolved "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.npmjs.org/lodash.throttle/-/lodash.throttle-4.1.1.tgz"
+  integrity sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==
+
 loose-envify@^1.0.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
@@ -2638,6 +2671,24 @@ minimist@^1.2.0, minimist@^1.2.6:
   resolved "https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz"
   integrity sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==
 
+motion-dom@^11.13.0:
+  version "11.13.0"
+  resolved "https://registry.npmjs.org/motion-dom/-/motion-dom-11.13.0.tgz"
+  integrity sha512-Oc1MLGJQ6nrvXccXA89lXtOqFyBmvHtaDcTRGT66o8Czl7nuA8BeHAd9MQV1pQKX0d2RHFBFaw5g3k23hQJt0w==
+
+motion-utils@^11.13.0:
+  version "11.13.0"
+  resolved "https://registry.npmjs.org/motion-utils/-/motion-utils-11.13.0.tgz"
+  integrity sha512-lq6TzXkH5c/ysJQBxgLXgM01qwBH1b4goTPh57VvZWJbVJZF/0SB31UWEn4EIqbVPf3au88n2rvK17SpDTja1A==
+
+motion@^11.11.14:
+  version "11.13.1"
+  resolved "https://registry.npmjs.org/motion/-/motion-11.13.1.tgz"
+  integrity sha512-64+QpZQv8WJJFn+tEEzX04il9s6ReA6lhKRZaxzD6SunGqoaq5g+AFVfcKWme8N83eytUOpGp7mpfJ9cyZlhAA==
+  dependencies:
+    framer-motion "^11.13.1"
+    tslib "^2.4.0"
+
 ms@^2.1.1, ms@^2.1.3:
   version "2.1.3"
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
@@ -2684,6 +2735,11 @@ next@15.0.3:
     "@next/swc-win32-arm64-msvc" "15.0.3"
     "@next/swc-win32-x64-msvc" "15.0.3"
     sharp "^0.33.5"
+
+nodemailer@^6.9.16:
+  version "6.9.16"
+  resolved "https://registry.npmjs.org/nodemailer/-/nodemailer-6.9.16.tgz"
+  integrity sha512-psAuZdTIRN08HKVd/E8ObdV6NO7NTBY3KsC30F7M4H1OnmLCUNaS56FpYxyb26zWLSyYF9Ozch9KYHhHegsiOQ==
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
@@ -2922,7 +2978,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prop-types@^15.8.1:
+prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -2949,9 +3005,9 @@ react-dom@19.0.0-rc-66855b96-20241106:
     scheduler "0.25.0-rc-66855b96-20241106"
 
 react-hook-form@^7.53.2:
-  version "7.53.2"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.53.2.tgz#6fa37ae27330af81089baadd7f322cc987b8e2ac"
-  integrity sha512-YVel6fW5sOeedd1524pltpHX+jgU2u3DSDtXEaBORNdqiNrsX/nUI/iGXONegttg0mJVnfrIkiV0cmTU6Oo2xw==
+  version "7.54.0"
+  resolved "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.54.0.tgz"
+  integrity sha512-PS05+UQy/IdSbJNojBypxAo9wllhHgGmyr8/dyGQcPoiMf3e7Dfb9PWYVRco55bLbxH9S+1yDDJeTdlYCSxO3A==
 
 react-icon@^1.0.0:
   version "1.0.0"
@@ -2962,6 +3018,11 @@ react-icons@^5.3.0:
   version "5.3.0"
   resolved "https://registry.npmjs.org/react-icons/-/react-icons-5.3.0.tgz"
   integrity sha512-DnUk8aFbTyQPSkCfF8dbX6kQjXA9DktMeJqfjrg6cK9vwQVMxmcA3BfP4QoiztVmEHtwlTgLFsPuH2NskKT6eg==
+
+react-intersection-observer@^9.13.1:
+  version "9.13.1"
+  resolved "https://registry.npmjs.org/react-intersection-observer/-/react-intersection-observer-9.13.1.tgz"
+  integrity sha512-tSzDaTy0qwNPLJHg8XZhlyHTgGW6drFKTtvjdL+p6um12rcnp8Z5XstE+QNBJ7c64n5o0Lj4ilUleA41bmDoMw==
 
 react-is@^16.13.1:
   version "16.13.1"
@@ -2986,6 +3047,14 @@ react-remove-scroll@2.6.0:
     tslib "^2.1.0"
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
+
+react-scroll@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.npmjs.org/react-scroll/-/react-scroll-1.9.0.tgz"
+  integrity sha512-mamNcaX9Ng+JeSbBu97nWwRhYvL2oba+xR2GxvyXsbDeGP+gkYIKZ+aDMMj/n20TbV9SCWm/H7nyuNTSiXA6yA==
+  dependencies:
+    lodash.throttle "^4.1.1"
+    prop-types "^15.7.2"
 
 react-style-singleton@^2.2.1:
   version "2.2.1"
@@ -3526,7 +3595,7 @@ typed-array-length@^1.0.6:
 
 typed.js@*, typed.js@^2.1.0:
   version "2.1.0"
-  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.1.0.tgz#b97a06111a5f57d6a59acfdd36d4f9b891ee13b4"
+  resolved "https://registry.npmjs.org/typed.js/-/typed.js-2.1.0.tgz"
   integrity sha512-bDuXEf7YcaKN4g08NMTUM6G90XU25CK3bh6U0THC/Mod/QPKlEt9g/EjvbYB8x2Qwr2p6J6I3NrsoYaVnY6wsQ==
 
 typescript@^5:
@@ -3673,5 +3742,5 @@ yocto-queue@^0.1.0:
 
 zod@^3.23.8:
   version "3.23.8"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.23.8.tgz#e37b957b5d52079769fb8097099b592f0ef4067d"
+  resolved "https://registry.npmjs.org/zod/-/zod-3.23.8.tgz"
   integrity sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==

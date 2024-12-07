@@ -1,64 +1,143 @@
-import { Box, Flex } from "@radix-ui/themes";
+"use client";
 import React from "react";
-import { Button } from "../ui/button";
-import { ArrowRight } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import TypingText from "../shared/TypeText";
 
 const HomePage = () => {
   return (
-    <Flex
-      className="items-center h-full ml-20 space-y-10 md:space-y-0 flex-wrap md:flex-nowrap p-5"
-      justify={"between"}
+    <div
+      className="min-h-screen relative overflow-hidden bg-gradient-to-b from-[#0F172A] to-[#1E293B]"
+      id="home"
     >
-      <Box className="space-y-3 w-1/2">
-        <div className="bg-[#0788FF] bg-opacity-20 text-white w-fit p-2 rounded-md">
-          NWAY NWAY WAI
-        </div>
-        <div className="text-5xl text-white font-semibold">
-          HAY! I'M NWAY NWAY
-        </div>
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
+      </div>
 
-        <TypingText texts={["I'M A WEB DEVELOPER"]} speed={200} loop={true} />
+      {/* Main content */}
+      <div className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 px-6 lg:px-20">
+        {/* Left side - Text content */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex-1 space-y-8 text-center lg:text-left"
+        >
+          <div className="space-y-4">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-block px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium"
+            >
+              Frontend Developer
+            </motion.div>
 
-        <div className="text-white w-fit p-2 rounded-md">
-          Yet bed any for travelling assistance indulgence unpleasing. Not
-          thoughts all exercise blessing. Indulgence way everything joy
-          alteration boisterous the attachment.
-        </div>
-        <Flex className="space-x-4">
-          <Button className="bg-blue-500 text-white rounded-3xl px-5 flex items-center space-x-2 border border-white">
-            <span>GET IN TOUCH</span>
-            <ArrowRight />
-          </Button>
-          <Flex className="space-x-3">
-            <Link href={"https://www.facebook.com/nwaywai02?mibextid=kFxxJD"}>
-              <Button className="bg-blue-600 w-[40px] h-[40px] rounded-full border border-white text-xl font-bold">
-                f
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-4xl lg:text-6xl font-bold text-white"
+            >
+              Hi, I&apos;m{" "}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                Nway Nway Wai
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0"
+            >
+              A passionate Frontend Developer based in Myanmar, crafting
+              beautiful and intuitive user interfaces with modern technologies.
+            </motion.p>
+          </div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="flex flex-wrap gap-4 justify-center lg:justify-start"
+          >
+            <Link href="#contact">
+              <Button
+                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition-all duration-300 text-white px-6 py-2 rounded-lg"
+              >
+                Contact Me
               </Button>
             </Link>
-            <Link href={"https://www.linkedin.com/in/nway-nway-wai"}>
-              <Button className="bg-[#3aa9f2] w-[40px] h-[40px] rounded-full border border-white text-lg font-bold">
-                in
+
+            <Link href="#project">
+              <Button
+                variant="outline"
+                className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all duration-300 px-6 py-2 rounded-lg"
+              >
+                View Projects
               </Button>
             </Link>
-            <Link href={""}>
-              <Button className="bg-green-500 w-[40px] h-[40px] rounded-full border border-white text-lg font-bold">
-                <FaWhatsapp />
-              </Button>
-            </Link>
-          </Flex>
-        </Flex>
-      </Box>
-      <Box className="w-1/2">
-        <img
-          src="/nway.JPG"
-          alt="Nway Nway Wai"
-          className="rounded-full shadow-lg w-full h-auto"
-        />
-      </Box>
-    </Flex>
+          </motion.div>
+
+          {/* Social Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex gap-6 justify-center lg:justify-start"
+          >
+            <a
+              href="https://github.com/nwaynwaywai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full"
+            >
+              <FaGithub size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nway-nway-wai-b94a5b244/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full"
+            >
+              <FaLinkedin size={24} />
+            </a>
+          </motion.div>
+        </motion.div>
+
+        {/* Right side - Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="flex-1 relative max-w-md w-full aspect-square"
+        >
+          <div className="relative w-full h-full">
+            {/* Decorative background elements */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-lg" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full" />
+
+            {/* Main image container */}
+            <div className="relative w-full h-full rounded-full border-4 border-white/10 overflow-hidden">
+              <Image
+                src="/nway.JPG"
+                alt="Nway Nway Wai"
+                fill
+                style={{ objectFit: "cover" }}
+                className="transition-transform duration-500 hover:scale-105"
+                priority
+              />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
   );
 };
 
