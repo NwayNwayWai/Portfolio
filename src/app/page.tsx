@@ -1,12 +1,10 @@
 import HeaderPage from "@/components/layout/Header";
-import PageLayout from "@/components/layout/PageLayout";
 import AboutMePage from "@/components/pages/AboutMe";
 import ContactPage from "@/components/pages/Contact";
 import ExperiencePage from "@/components/pages/Experience";
 import HomePage from "@/components/pages/Home";
 import ProjectsPage from "@/components/pages/Projects";
 import ServicesPage from "@/components/pages/Services";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (

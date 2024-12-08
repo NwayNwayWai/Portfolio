@@ -19,23 +19,53 @@ const HeaderPage = () => {
     { label: "CONTACT", path: "#contact" },
   ];
 
-  // Handle scroll events
+  // Handle scroll events and section visibility
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50); // Change background after scrolling 50px
+      setIsScrolled(scrollPosition > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initial position
+    // Create intersection observer
+    const observerOptions = {
+      root: null,
+      rootMargin: "-50% 0px",  // Consider element in view when it's in the middle
+      threshold: 0
+    };
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          setActiveMenu(`#${sectionId}`);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe all sections
+    menuItems.forEach(item => {
+      const sectionId = item.path.replace('#', '');
+      const section = document.getElementById(sectionId);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
+  }, [menuItems]);
 
   const updateIndicatorPosition = useCallback(() => {
     const activeIndex = menuItems.findIndex((item) => item.path === activeMenu);
     if (activeIndex >= 0 && menuRefs.current[activeIndex]) {
-      const activeElement = menuRefs.current[activeIndex];
+      // const activeElement = menuRefs.current[activeIndex];
       setIndicatorPosition(activeIndex * 120); // 120px is the width of each menu item
     }
   }, [activeMenu]);
@@ -114,7 +144,7 @@ const HeaderPage = () => {
 
         <Link href={"#contact"}>
           <Button className="rounded-3xl bg-blue-500 border border-white ml-4">
-            LET'S TALK
+            {`LET'S TALK`}
           </Button>
         </Link>
       </Flex>

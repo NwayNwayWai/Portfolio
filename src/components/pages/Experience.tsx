@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBriefcase, FaCalendar, FaBuilding } from "react-icons/fa";
+import { FaCalendar, FaBuilding } from "react-icons/fa";
 import { resumeData } from "@/data/resume";
 
 const ExperiencePage = () => {
@@ -44,7 +44,9 @@ const ExperiencePage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative mb-12 ${
-                index % 2 === 0 ? 'md:pr-12 md:ml-auto md:w-1/2' : 'md:pl-12 md:w-1/2'
+                index % 2 === 0
+                  ? "md:pr-12 md:ml-auto md:w-1/2"
+                  : "md:pl-12 md:w-1/2"
               }`}
             >
               {/* Timeline dot */}
@@ -65,7 +67,9 @@ const ExperiencePage = () => {
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-3">{exp.position}</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  {exp.position}
+                </h3>
                 <p className="text-gray-400 leading-relaxed whitespace-pre-line mb-4">
                   {exp.description}
                 </p>
