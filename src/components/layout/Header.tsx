@@ -29,12 +29,12 @@ const HeaderPage = () => {
     // Create intersection observer
     const observerOptions = {
       root: null,
-      rootMargin: "-50% 0px",  // Consider element in view when it's in the middle
-      threshold: 0
+      rootMargin: "-50% 0px", // Consider element in view when it's in the middle
+      threshold: 0,
     };
 
     const observerCallback: IntersectionObserverCallback = (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const sectionId = entry.target.id;
           setActiveMenu(`#${sectionId}`);
@@ -42,11 +42,14 @@ const HeaderPage = () => {
       });
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
 
     // Observe all sections
-    menuItems.forEach(item => {
-      const sectionId = item.path.replace('#', '');
+    menuItems.forEach((item) => {
+      const sectionId = item.path.replace("#", "");
       const section = document.getElementById(sectionId);
       if (section) {
         observer.observe(section);

@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,7 @@ import Link from "next/link";
 const HomePage = () => {
   return (
     <div
-      className="min-h-screen relative overflow-hidden bg-gradient-to-b from-[#0F172A] to-[#1E293B]"
+      className="min-h-screen  bg-gradient-to-b from-[#0F172A] to-[#1E293B]"
       id="home"
     >
       {/* Background decorative elements */}
@@ -21,61 +20,34 @@ const HomePage = () => {
       {/* Main content */}
       <div className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 px-6 lg:px-20">
         {/* Left side - Text content */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex-1 space-y-8 text-center lg:text-left"
-        >
+        <div className="flex-1 space-y-8 text-center lg:text-left">
           <div className="space-y-4">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-block px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium"
-            >
+            <div className="inline-block px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium">
               Frontend Developer
-            </motion.div>
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl lg:text-6xl font-bold text-white"
-            >
-              Hi, I&apos;m{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white">
+              {`Hi, I'm`}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text ml-2">
                 Nway Nway Wai
               </span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0"
-            >
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0">
               A passionate Frontend Developer based in Myanmar, crafting
               beautiful and intuitive user interfaces with modern technologies.
-            </motion.p>
+            </p>
           </div>
 
           {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-wrap gap-4 justify-center lg:justify-start"
-          >
+          {/* <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
             <Link href="#contact">
-              <Button
-                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition-all duration-300 text-white px-6 py-2 rounded-lg"
-              >
+              <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition-all duration-300 text-white px-6 py-2 rounded-lg">
                 Contact Me
               </Button>
             </Link>
 
-            <Link href="#project">
+            <Link href="#project" passHref>
               <Button
                 variant="outline"
                 className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all duration-300 px-6 py-2 rounded-lg"
@@ -83,15 +55,10 @@ const HomePage = () => {
                 View Projects
               </Button>
             </Link>
-          </motion.div>
+          </div> */}
 
           {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex gap-6 justify-center lg:justify-start"
-          >
+          {/* <div className="flex gap-6 justify-center lg:justify-start">
             <a
               href="https://github.com/nwaynwaywai"
               target="_blank"
@@ -108,16 +75,11 @@ const HomePage = () => {
             >
               <FaLinkedin size={24} />
             </a>
-          </motion.div>
-        </motion.div>
+          </div> */}
+        </div>
 
         {/* Right side - Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="flex-1 relative max-w-md w-full aspect-square"
-        >
+        <div className="flex-1 relative max-w-md w-full aspect-square">
           <div className="relative w-full h-full">
             {/* Decorative background elements */}
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-lg" />
@@ -135,7 +97,7 @@ const HomePage = () => {
               />
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
