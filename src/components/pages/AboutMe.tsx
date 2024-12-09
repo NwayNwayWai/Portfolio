@@ -2,14 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Box, Flex, Grid } from "@radix-ui/themes";
+import { Box } from "@radix-ui/themes";
 import { resumeData } from "@/data/resume";
-import SectionTitle from "../shared/SectionTitle";
 import CircularProgress from "../shared/CircularProgress";
-import ExperienceCard from "../shared/ExperienceCard";
 import {
   FaGraduationCap,
-  FaBriefcase,
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhone,
@@ -36,9 +33,7 @@ const AboutMePage = () => {
           <h3 className="text-blue-500 text-lg font-semibold tracking-wider mb-4">
             ABOUT ME
           </h3>
-          <h2 className="text-4xl font-bold text-white">
-            Personal Info
-          </h2>
+          <h2 className="text-4xl font-bold text-white">Personal Info</h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
@@ -147,7 +142,7 @@ const AboutMePage = () => {
                 Skills
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                {mainSkills.map((skill, index) => (
+                {mainSkills.map((skill) => (
                   <CircularProgress
                     key={skill.name}
                     percentage={skill.percentage}

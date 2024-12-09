@@ -1,13 +1,14 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const ProjectsPage = () => {
   const projects = [
     {
       title: "BeyondPatrol",
-      description: "BeyondPatrol is an AI-powered video analytics solution that revolutionizes security and safety monitoring. The platform provides real-time threat detection, automated responses, and intelligent insights for security teams.",
+      description:
+        "BeyondPatrol is an AI-powered video analytics solution that revolutionizes security and safety monitoring. The platform provides real-time threat detection, automated responses, and intelligent insights for security teams.",
       role: "Junior Frontend Developer",
       keyFeatures: [
         "Real-time video monitoring and analytics",
@@ -15,7 +16,7 @@ const ProjectsPage = () => {
         "Automated incident response",
         "Customizable alert system",
         "Interactive dashboard",
-        "Historical data analysis"
+        "Historical data analysis",
       ],
       contributions: [
         "Developed responsive and modern user interface components using Next.js 14",
@@ -23,7 +24,7 @@ const ProjectsPage = () => {
         "Created interactive dashboard layouts with Tailwind CSS",
         "Integrated Supabase for real-time data synchronization",
         "Built reusable component libraries",
-        "Optimized performance for handling multiple video streams"
+        "Optimized performance for handling multiple video streams",
       ],
       technologies: [
         "Next.js 14",
@@ -31,10 +32,10 @@ const ProjectsPage = () => {
         "TypeScript",
         "Tailwind CSS",
         "Supabase",
-        "WebRTC"
+        "WebRTC",
       ],
-      link: "https://beyondsensor.com/products/beyondpatrol/"
-    }
+      link: "https://beyondsensor.com/products/beyondpatrol/",
+    },
   ];
 
   return (
@@ -82,7 +83,9 @@ const ProjectsPage = () => {
 
                 {/* Role */}
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-2">Role</h4>
+                  <h4 className="text-lg font-semibold text-white mb-2">
+                    Role
+                  </h4>
                   <p className="text-gray-400">{project.role}</p>
                 </div>
 
