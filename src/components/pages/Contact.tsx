@@ -26,16 +26,16 @@ import {
 
 const FormSchema = z.object({
   name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+    message: "Please enter your name",
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: "Please enter a valid email",
   }),
   subject: z.string().min(5, {
-    message: "Subject must be at least 5 characters.",
+    message: "Please add a brief subject",
   }),
   message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
+    message: "Please write a message (at least a few words)",
   }),
 });
 
@@ -68,18 +68,19 @@ const ContactPage = () => {
 
       if (response.ok) {
         toast({
-          title: "Message sent successfully!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
+          title: "Message sent!",
+          description: "Thanks for reaching out. I'll get back to you soon!",
         });
         form.reset();
       } else {
-        throw new Error(result.error || "Failed to send email");
+        throw new Error(result.error || "Couldn't send message");
       }
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Error:", error);
       toast({
-        title: "Error sending message",
-        description: "Please try again later or contact me directly via email.",
+        title: "Oops!",
+        description:
+          "Something went wrong. Please email me directly or try again later.",
         variant: "destructive",
       });
     } finally {
@@ -103,19 +104,19 @@ const ContactPage = () => {
     {
       icon: <FaMapMarkerAlt className="w-5 h-5" />,
       label: "Location",
-      value: "Bangkok, Thailand",
-      link: null,
+      value: "Yangon, Myanmar",
     },
+  ];
+
+  const socialLinks = [
     {
       icon: <FaLinkedin className="w-5 h-5" />,
       label: "LinkedIn",
-      value: "Nway Nway Wai",
-      link: "https://linkedin.com/in/nway-nway-wai",
+      link: "https://www.linkedin.com/in/nway-nway-wai-b9b961297",
     },
     {
       icon: <FaGithub className="w-5 h-5" />,
       label: "GitHub",
-      value: "NwayNwayWai",
       link: "https://github.com/NwayNwayWai",
     },
   ];
@@ -180,6 +181,27 @@ const ContactPage = () => {
                       ) : (
                         <p className="text-white">{info.value}</p>
                       )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <h2 className="text-2xl font-bold text-white mb-6 mt-8">
+                Social Links
+              </h2>
+              <div className="space-y-6">
+                {socialLinks.map((info, index) => (
+                  <div key={index} className="flex items-center space-x-4">
+                    <div className="text-blue-400">{info.icon}</div>
+                    <div>
+                      <p className="text-sm text-gray-400">{info.label}</p>
+                      <a
+                        href={info.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-blue-400 transition-colors"
+                      >
+                        {info.link}
+                      </a>
                     </div>
                   </div>
                 ))}

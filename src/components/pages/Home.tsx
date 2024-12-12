@@ -34,13 +34,15 @@ const HomePage = () => {
             </h1>
 
             <p className="text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0">
-              A passionate Frontend Developer based in Myanmar, crafting
-              beautiful and intuitive user interfaces with modern technologies.
+              A passionate Frontend Developer based in Thailand, specializing in
+              crafting modern and responsive web applications. With expertise in
+              React, Next.js, and TypeScript, I focus on creating seamless user
+              experiences with clean, efficient code.
             </p>
           </div>
 
           {/* CTA Buttons */}
-          {/* <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
             <Link href="#contact">
               <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition-all duration-300 text-white px-6 py-2 rounded-lg">
                 Contact Me
@@ -55,10 +57,10 @@ const HomePage = () => {
                 View Projects
               </Button>
             </Link>
-          </div> */}
+          </div>
 
           {/* Social Links */}
-          {/* <div className="flex gap-6 justify-center lg:justify-start">
+          <div className="flex gap-6 justify-center lg:justify-start">
             <a
               href="https://github.com/nwaynwaywai"
               target="_blank"
@@ -75,7 +77,7 @@ const HomePage = () => {
             >
               <FaLinkedin size={24} />
             </a>
-          </div> */}
+          </div>
         </div>
 
         {/* Right side - Image */}

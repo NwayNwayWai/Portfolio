@@ -8,26 +8,26 @@ const ProjectsPage = () => {
     {
       title: "BeyondPatrol",
       description:
-        "BeyondPatrol is an AI-powered video analytics solution that revolutionizes security and safety monitoring. The platform provides real-time threat detection, automated responses, and intelligent insights for security teams.",
-      role: "Junior Frontend Developer",
+        "A smart security system that uses AI to monitor and protect spaces in real-time. It helps security teams work better by automatically spotting and responding to potential issues.",
+      role: "Frontend Developer",
       keyFeatures: [
-        "Real-time video monitoring and analytics",
-        "AI-powered threat detection",
-        "Automated incident response",
-        "Customizable alert system",
-        "Interactive dashboard",
-        "Historical data analysis",
+        "Live video monitoring",
+        "Smart threat detection",
+        "Quick alerts",
+        "Easy-to-use dashboard",
+        "Video recording",
+        "Data insights",
       ],
       contributions: [
-        "Developed responsive and modern user interface components using Next.js 14",
-        "Implemented real-time video streaming features",
-        "Created interactive dashboard layouts with Tailwind CSS",
-        "Integrated Supabase for real-time data synchronization",
-        "Built reusable component libraries",
-        "Optimized performance for handling multiple video streams",
+        "Built user-friendly interface with Next.js",
+        "Added live video streaming",
+        "Created clean, modern layouts",
+        "Set up live data updates",
+        "Made reusable components",
+        "Improved video loading speed",
       ],
       technologies: [
-        "Next.js 14",
+        "Next.js",
         "React",
         "TypeScript",
         "Tailwind CSS",
@@ -55,13 +55,13 @@ const ProjectsPage = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium mb-4">
-            My Work
+            Projects
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Featured Projects
+            My Work
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Showcasing my latest work and contributions to innovative projects
+            {`Here are some cool projects I've worked on. Check them out and see what I've been working on!`}
           </p>
         </motion.div>
 
