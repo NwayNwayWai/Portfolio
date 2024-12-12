@@ -24,10 +24,10 @@ const AboutMePage = () => {
 
   return (
     <Box
-      className="min-h-screen bg-gradient-to-b from-[#111827] to-[#1E293B] pt-24"
+      className="min-h-screen bg-gradient-to-b from-[#111827] to-[#1E293B] py-24"
       id="about-me"
     >
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         {/* Section Title */}
         <div className="text-center mb-16">
           <h3 className="text-blue-500 text-lg font-semibold tracking-wider mb-4">
@@ -36,16 +36,16 @@ const AboutMePage = () => {
           <h2 className="text-4xl font-bold text-white">Personal Info</h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Left Column */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-10"
+            className="space-y-8"
           >
             {/* Profile Image with Shape */}
-            <div className="relative group">
+            <div className="relative group mx-auto lg:mx-0 max-w-md">
               <div className="relative w-full aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl">
                 <Image
                   src="/nway.JPG"
@@ -61,58 +61,45 @@ const AboutMePage = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="bg-[#1E293B]/50 backdrop-blur-sm p-10 rounded-[30px] space-y-8 shadow-xl border border-white/5 hover:border-blue-500/20 transition-colors duration-300">
-              <h3 className="text-3xl font-bold text-white mb-8 relative">
+            <div className="bg-[#1E293B]/50 backdrop-blur-sm p-8 lg:p-10 rounded-[30px] space-y-6 shadow-xl border border-white/5 hover:border-blue-500/20 transition-colors duration-300">
+              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6">
                 Contact Info
               </h3>
               <div className="space-y-6">
-                <motion.div
-                  className="flex items-center space-x-6 group"
-                  whileHover={{ x: 10 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="w-14 h-14 bg-blue-500 bg-opacity-10 rounded-2xl flex items-center justify-center group-hover:bg-blue-500 group-hover:bg-opacity-20 transition-all duration-300">
-                    <FaMapMarkerAlt className="text-blue-500 text-2xl" />
-                  </div>
-                  <div>
-                    <h4 className="text-gray-400 text-sm mb-1">Location</h4>
-                    <p className="text-white font-medium">
-                      {resumeData.personalInfo.contact.address}
-                    </p>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  className="flex items-center space-x-6 group"
-                  whileHover={{ x: 10 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="w-14 h-14 bg-blue-500 bg-opacity-10 rounded-2xl flex items-center justify-center group-hover:bg-blue-500 group-hover:bg-opacity-20 transition-all duration-300">
-                    <FaEnvelope className="text-blue-500 text-2xl" />
-                  </div>
-                  <div>
-                    <h4 className="text-gray-400 text-sm mb-1">Email</h4>
-                    <p className="text-white font-medium">
-                      {resumeData.personalInfo.contact.email}
-                    </p>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  className="flex items-center space-x-6 group"
-                  whileHover={{ x: 10 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <div className="w-14 h-14 bg-blue-500 bg-opacity-10 rounded-2xl flex items-center justify-center group-hover:bg-blue-500 group-hover:bg-opacity-20 transition-all duration-300">
-                    <FaPhone className="text-blue-500 text-2xl" />
-                  </div>
-                  <div>
-                    <h4 className="text-gray-400 text-sm mb-1">Phone</h4>
-                    <p className="text-white font-medium">
-                      {resumeData.personalInfo.contact.phone}
-                    </p>
-                  </div>
-                </motion.div>
+                {[
+                  {
+                    icon: <FaMapMarkerAlt className="text-blue-500 text-2xl" />,
+                    label: "Location",
+                    value: resumeData.personalInfo.contact.address,
+                  },
+                  {
+                    icon: <FaEnvelope className="text-blue-500 text-2xl" />,
+                    label: "Email",
+                    value: resumeData.personalInfo.contact.email,
+                  },
+                  {
+                    icon: <FaPhone className="text-blue-500 text-2xl" />,
+                    label: "Phone",
+                    value: resumeData.personalInfo.contact.phone,
+                  },
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-center space-x-6 group"
+                    whileHover={{ x: 10 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <div className="w-14 h-14 bg-blue-500 bg-opacity-10 rounded-2xl flex items-center justify-center group-hover:bg-blue-500 group-hover:bg-opacity-20 transition-all duration-300">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-gray-400 text-sm mb-1">
+                        {item.label}
+                      </h4>
+                      <p className="text-white font-medium">{item.value}</p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </motion.div>
@@ -122,26 +109,26 @@ const AboutMePage = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-10"
+            className="space-y-8"
           >
             {/* About Text */}
-            <div className="bg-[#1E293B]/50 backdrop-blur-sm p-10 rounded-[30px] shadow-xl border border-white/5 hover:border-blue-500/20 transition-colors duration-300">
-              <h3 className="text-3xl font-bold text-white flex items-center gap-4">
+            <div className="bg-[#1E293B]/50 backdrop-blur-sm p-8 lg:p-10 rounded-[30px] shadow-xl border border-white/5 hover:border-blue-500/20 transition-colors duration-300">
+              <h3 className="text-2xl lg:text-3xl font-bold text-white flex items-center gap-4 mb-6">
                 <FaUser className="text-blue-500 text-2xl" />
                 About Me
               </h3>
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <p className="text-gray-300 leading-relaxed text-base lg:text-lg">
                 {resumeData.personalInfo.bio}
               </p>
             </div>
 
             {/* Skills */}
-            <div className="bg-[#1E293B]/50 backdrop-blur-sm p-10 rounded-[30px] space-y-8 shadow-xl border border-white/5 hover:border-blue-500/20 transition-colors duration-300">
-              <h3 className="text-3xl font-bold text-white flex items-center gap-4">
+            <div className="bg-[#1E293B]/50 backdrop-blur-sm p-8 lg:p-10 rounded-[30px] shadow-xl border border-white/5 hover:border-blue-500/20 transition-colors duration-300">
+              <h3 className="text-2xl lg:text-3xl font-bold text-white flex items-center gap-4 mb-8">
                 <FaCode className="text-blue-500 text-2xl" />
                 Skills
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-2 gap-6 lg:gap-8">
                 {mainSkills.map((skill) => (
                   <CircularProgress
                     key={skill.name}
@@ -153,22 +140,22 @@ const AboutMePage = () => {
             </div>
 
             {/* Education */}
-            <div className="bg-[#1E293B]/50 backdrop-blur-sm p-10 rounded-[30px] space-y-6 shadow-xl border border-white/5 hover:border-blue-500/20 transition-colors duration-300">
-              <h3 className="text-3xl font-bold text-white flex items-center gap-4">
+            <div className="bg-[#1E293B]/50 backdrop-blur-sm p-8 lg:p-10 rounded-[30px] shadow-xl border border-white/5 hover:border-blue-500/20 transition-colors duration-300">
+              <h3 className="text-2xl lg:text-3xl font-bold text-white flex items-center gap-4 mb-6">
                 <FaGraduationCap className="text-blue-500 text-2xl" />
                 Education
               </h3>
               <motion.div
-                className="bg-[#111827]/50 rounded-2xl p-8 hover:bg-[#111827]/70 transition-all duration-300"
+                className="bg-[#111827]/50 rounded-2xl p-6 lg:p-8 hover:bg-[#111827]/70 transition-all duration-300"
                 whileHover={{ y: -5 }}
               >
-                <span className="inline-block px-6 py-2 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm font-medium mb-4">
+                <span className="inline-block px-4 py-1.5 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm font-medium mb-4">
                   {resumeData.education.period}
                 </span>
-                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">
                   {resumeData.education.degree}
                 </h3>
-                <h4 className="text-blue-400 font-semibold text-lg">
+                <h4 className="text-blue-400 font-semibold text-base lg:text-lg">
                   {resumeData.education.university}
                 </h4>
               </motion.div>

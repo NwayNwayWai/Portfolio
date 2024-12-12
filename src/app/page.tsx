@@ -8,8 +8,7 @@ import ServicesPage from "@/components/pages/Services";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-r from-[#062139] to-[#040F1A]  ">
-      <HeaderPage />
+    <div className="bg-gradient-to-r from-[#062139] to-[#040F1A]">
       <div className="pt-[40px]">
         <section id="home" className="min-h-screen">
           <HomePage />
