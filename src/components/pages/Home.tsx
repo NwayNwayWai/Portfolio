@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 const HomePage = () => {
   return (
@@ -26,8 +23,9 @@ const HomePage = () => {
               Frontend Developer
             </div>
 
-            <h1 className="text-4xl lg:text-6xl font-bold text-white">
+            <h1 className="text-4xl lg:text-5xl font-bold text-white">
               {`Hi, I'm`}
+
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text ml-2">
                 Nway Nway Wai
               </span>
@@ -42,42 +40,6 @@ const HomePage = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-            <Link href="#contact">
-              <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition-all duration-300 text-white px-6 py-2 rounded-lg">
-                Contact Me
-              </Button>
-            </Link>
-
-            <Link href="#project" passHref>
-              <Button
-                variant="outline"
-                className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all duration-300 px-6 py-2 rounded-lg"
-              >
-                View Projects
-              </Button>
-            </Link>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex gap-6 justify-center lg:justify-start">
-            <a
-              href="https://github.com/nwaynwaywai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full"
-            >
-              <FaGithub size={24} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/nway-nway-wai-b94a5b244/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full"
-            >
-              <FaLinkedin size={24} />
-            </a>
-          </div>
         </div>
 
         {/* Right side - Image */}

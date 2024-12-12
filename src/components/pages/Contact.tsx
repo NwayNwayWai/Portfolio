@@ -104,7 +104,7 @@ const ContactPage = () => {
     {
       icon: <FaMapMarkerAlt className="w-5 h-5" />,
       label: "Location",
-      value: "Yangon, Myanmar",
+      value: "Bangkok, Thailand",
     },
   ];
 
