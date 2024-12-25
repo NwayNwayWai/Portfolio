@@ -46,12 +46,12 @@ const AboutMePage = () => {
           >
             {/* Profile Image with Shape */}
             <div className="relative group mx-auto lg:mx-0 max-w-md">
-              <div className="relative w-full aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl">
+              <div className="relative w-full aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl ">
                 <Image
                   src="/nway.JPG"
                   alt="Nway Nway Wai"
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>

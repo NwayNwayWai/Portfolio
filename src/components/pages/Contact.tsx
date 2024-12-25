@@ -113,11 +113,13 @@ const ContactPage = () => {
       icon: <FaLinkedin className="w-5 h-5" />,
       label: "LinkedIn",
       link: "https://www.linkedin.com/in/nway-nway-wai-b9b961297",
+      name: "Nway Nway Wai",
     },
     {
       icon: <FaGithub className="w-5 h-5" />,
       label: "GitHub",
       link: "https://github.com/NwayNwayWai",
+      name: "Nway Nway Wai",
     },
   ];
 
@@ -200,7 +202,7 @@ const ContactPage = () => {
                         rel="noopener noreferrer"
                         className="text-white hover:text-blue-400 transition-colors"
                       >
-                        {info.link}
+                        {info.name}
                       </a>
                     </div>
                   </div>
