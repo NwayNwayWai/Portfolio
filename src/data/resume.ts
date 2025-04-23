@@ -214,40 +214,5 @@ export const resumeData = {
       shortDescription:
         "Centralized license management platform with automated renewal workflows and usage analytics",
     },
-    {
-      position: "Graduation Internship Project",
-      company: "[University Name] × [Company Name]", // Example: "Yangon Tech University × Digital Solutions Co."
-      projectName: "Peal Store E-commerce",
-      location: "Yangon, Myanmar",
-      period: "06/2023 - 09/2023",
-      description:
-        "Capstone project fulfilling BSc in Computer Science requirements, developing a production-grade e-commerce platform. Key academic-industry contributions:\n" +
-        "• Delivered full SDLC implementation from requirements gathering to deployment\n" +
-        "• Engineered core features meeting academic rigor and industry standards\n" +
-        "• Implemented real-time search with debounce optimization (300ms threshold)\n" +
-        "• Developed cache-first architecture for product listings using LocalStorage\n" +
-        "• Integrated 3 payment gateways (Wave Money, KBZ Pay, Visa)\n" +
-        "• Conducted usability testing with 50+ participants from target demographics\n" +
-        "• Achieved 94% satisfaction rate in final thesis evaluation\n",
-
-      technologies: [
-        "React",
-        "Redux Toolkit",
-        "TypeScript",
-        "Styled Components",
-        "REST API",
-        "Payment Gateway Integration",
-        "Academic Research Methods",
-      ],
-      // Add thesis PDF link or university project portal
-      image: "/pealstroe.png",
-      category: "Academic-Industry Collaboration",
-      shortDescription:
-        "Degree-fulfilling e-commerce platform combining academic research with commercial-grade development practices",
-      academicAdvisors: [
-        "Dr. Aye Aye Khin (University Supervisor)",
-        "U Hla Myint (Industry Mentor)",
-      ],
-    },
   ],
 };
