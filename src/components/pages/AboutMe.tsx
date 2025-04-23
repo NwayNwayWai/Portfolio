@@ -29,13 +29,19 @@ const AboutMePage = () => {
     >
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         {/* Section Title */}
-        <div className="text-center mb-16">
-          <h3 className="text-blue-500 text-lg font-semibold tracking-wider mb-4">
-            ABOUT ME
-          </h3>
-          <h2 className="text-4xl font-bold text-white">Personal Info</h2>
-        </div>
-
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <span className="inline-block px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium mb-4">
+            About me
+          </span>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Personal Info
+          </h1>
+        </motion.div>
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Left Column */}
           <motion.div
@@ -61,7 +67,7 @@ const AboutMePage = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="bg-[#1E293B]/50 backdrop-blur-sm p-8 lg:p-10 rounded-[30px] space-y-6 shadow-xl border border-white/5 hover:border-blue-500/20 transition-colors duration-300">
+            <div className="bg-[#1E293B]/50 backdrop-blur-sm p-8 lg:p-10 rounded-[30px] space-y-6 shadow-xl border border-white/5 hover:border-blue-500/20 transition-colors duration-300 w-full lg:w-[80%]">
               <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6">
                 Contact Info
               </h3>

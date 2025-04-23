@@ -111,7 +111,17 @@ const HeaderPage = () => {
           className="h-[80px] text-white items-center w-full pl-20"
           justify="between"
         >
-          <Box className="font-bold">NWAY NWAY WAI</Box>
+          <Flex className="flex items-center font-bold">
+            <video
+              src="/logo-m.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-8 h-8 mr-2 rounded-full object-cover"
+            />
+            NWAY NWAY WAI
+          </Flex>
           <div className="flex items-center relative">
             {menuItems.map((item, index) => (
               <Link
