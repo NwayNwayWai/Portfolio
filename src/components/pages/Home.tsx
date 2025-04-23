@@ -177,14 +177,14 @@ const HomePage = () => {
 
             <motion.h1
               variants={textVariants}
-              className="text-4xl sm:text-5xl lg:text-5xl font-bold text-white flex items-center justify-center lg:justify-start"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white flex flex-wrap items-center justify-center lg:justify-start text-center sm:text-left"
             >
               {" Hi, I'm "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 ml-2">
                 {displayedText}
               </span>
               <motion.span
-                className="inline-block w-[4px] h-12 bg-blue-400 ml-1"
+                className="inline-block w-[3px] h-8 sm:h-10 md:h-12 bg-blue-400 ml-1"
                 animate={{
                   opacity: [0, 1],
                 }}

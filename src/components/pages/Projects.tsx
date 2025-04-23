@@ -63,26 +63,16 @@ const ProjectsPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0f172a] to-[#1e293b] py-20 px-4 sm:px-6 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-[#0f172a] to-[#1e293b] py-16 px-3 sm:px-6 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          animate={{
-            opacity: [0.5, 0.8, 0.5],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
+          animate={{ opacity: [0.5, 0.8, 0.5], scale: [1, 1.2, 1] }}
+          transition={{ duration: 8, repeat: Infinity, repeatType: "reverse" }}
           className="absolute w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[150px] -top-60 -left-60"
         />
         <motion.div
-          animate={{
-            opacity: [0.5, 0.8, 0.5],
-            scale: [1.2, 1, 1.2],
-          }}
+          animate={{ opacity: [0.5, 0.8, 0.5], scale: [1.2, 1, 1.2] }}
           transition={{
             duration: 8,
             repeat: Infinity,
@@ -202,25 +192,26 @@ const ProjectsPage = () => {
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
-              initial={{ opacity: 0, y: 100, scale: 0.9 }}
+              initial={{ opacity: 0, y: 100, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 100, scale: 0.9 }}
+              exit={{ opacity: 0, y: 100, scale: 0.95 }}
               transition={{ type: "spring", damping: 15 }}
-              className="bg-white/[0.03] backdrop-blur-xl rounded-2xl p-8  w-full relative"
+              className="bg-white/[0.03] backdrop-blur-xl rounded-2xl p-4 sm:p-8 w-full max-w-5xl max-h-[90vh] overflow-y-auto relative"
               onClick={(e) => e.stopPropagation()}
             >
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 text-gray-300 hover:text-white transition-colors"
+                className="absolute top-4 right-4 text-white p-2 rounded-full bg-black/50 hover:bg-black/70 focus:outline-none focus:ring-2 focus:ring-white z-50"
+                aria-label="Close Modal"
               >
                 <FaTimes size={20} />
               </motion.button>
 
               <div className="flex flex-col md:flex-row gap-6">
                 {/* Image Section */}
-                <div className="md:w-1/2 w-full  md:h-auto relative rounded-xl overflow-hidden">
+                <div className="w-full md:w-1/2 h-64 md:h-auto relative rounded-xl overflow-hidden">
                   {projects[selectedProject].image && (
                     <Image
                       src={projects[selectedProject].image}
@@ -233,7 +224,7 @@ const ProjectsPage = () => {
                 </div>
 
                 {/* Content Section */}
-                <div className="md:w-1/2 w-full flex flex-col justify-between">
+                <div className="w-full md:w-1/2 flex flex-col justify-between">
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {projects[selectedProject].projectName}
