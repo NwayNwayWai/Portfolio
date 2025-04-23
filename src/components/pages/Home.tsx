@@ -179,7 +179,7 @@ const HomePage = () => {
               variants={textVariants}
               className="text-4xl sm:text-5xl lg:text-5xl font-bold text-white flex items-center justify-center lg:justify-start"
             >
-              Hi, I'm{" "}
+              {" Hi, I'm "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 ml-2">
                 {displayedText}
               </span>
