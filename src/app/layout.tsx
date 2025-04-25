@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    url: "https://nwaynwaywai.vercel.app/image/nway1.JPG",
+    url: "https://nway-nway-wai.vercel.app/nway1.JPG",
     title: "Nway Nway Wai",
     description: "Nway Nway Wai's portfolio",
     images: [
       {
-        url: "https://nwaynwaywai.vercel.app/image/nway1.JPG",
+        url: "https://nway-nway-wai.vercel.app/nway1.JPG",
       },
     ],
   },
