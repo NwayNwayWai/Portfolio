@@ -196,7 +196,7 @@ const ProjectsPage = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 100, scale: 0.95 }}
               transition={{ type: "spring", damping: 15 }}
-              className="bg-white/[0.03] backdrop-blur-xl rounded-2xl p-4 sm:p-8 w-full max-w-5xl max-h-[90vh] overflow-y-auto relative"
+              className="bg-white/[0.03] backdrop-blur-xl rounded-2xl p-4 sm:p-8 w-full max-h-[90vh] overflow-y-auto relative"
               onClick={(e) => e.stopPropagation()}
             >
               <motion.button

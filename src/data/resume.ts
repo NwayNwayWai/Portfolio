@@ -44,30 +44,30 @@ export const resumeData = {
       location: "Singapore",
       period: "04/2024 - Present",
       description:
-        "Frontend Developer for BeyondPatrol, an innovative video monitoring platform that enhances physical security operations through browser-based solutions. Key contributions include:\n" +
-        "• Architecting responsive interfaces with Next.js 14 and React using TypeScript\n" +
-        "• Implementing complex surveillance dashboards with real-time WebRTC video streaming\n" +
-        "• Developing a Tailwind CSS design system for consistent security operation interfaces\n" +
-        "• Building mission-critical features for virtual patrol configuration and execution\n" +
-        "• Creating modular components for CCTV grid layouts and checkpoint verification systems\n" +
-        "• Integrating Supabase for real-time data synchronization between patrol units and command centers\n" +
-        "• Optimizing performance for high-concurrency CCTV monitoring scenarios\n" +
-        "• Conducting rigorous testing of video processing workflows and alarm systems",
+        "Frontend Developer for BeyondPatrol at a APAC-focused security innovator (est. 2022) delivering browser-based solutions to Malaysia, Thailand, and Philippines. Contribute to mission-critical systems aligning with the company's vision of tech-driven peace of mind. Key contributions include:\n" +
+        "• Architected 10+ responsive interfaces using Next.js 14/React/TypeScript, supporting 50+ concurrent CCTV feeds\n" +
+        "• Implemented real-time surveillance dashboards with WebRTC streaming for 24/7 security operations\n" +
+        "• Developed company-wide Tailwind CSS design system adopted across 15+ security interfaces\n" +
+        "• Built virtual patrol configuration tools reducing security workflow setup time by 35%\n" +
+        "• Created modular CCTV grid components handling 100k+ daily verification checks APAC-wide\n" +
+        "• Integrated Supabase real-time sync for 500+ connected devices across command centers\n" +
+        "• Optimized WebRTC performance to maintain 60 FPS during high-density monitoring\n" +
+        "• Conducted stress testing for alarm systems processing 10k+ simultaneous triggers",
       technologies: [
-        "Next.js 14",
-        "React",
+        "Next.js 14 (App Router)",
+        "React Server Components",
         "TypeScript",
         "Tailwind CSS",
-        "Supabase",
-        "WebRTC",
-        "Real-time Systems",
-        "Video Processing",
+        "Supabase Realtime",
+        "WebRTC/WebSocket",
+        "Video Analytics",
+        "Jest/Cypress Testing",
       ],
-      link: "https://beyondsensor.com/products/beyondpatrol/",
-      image: "/beyondpatrol.png",
+      link: "https://beyondsensor.com/",
+      image: "/patrol.png",
       category: "Security Technology",
       shortDescription:
-        "Browser-based virtual patrol system integrating live CCTV monitoring and security workflows",
+        "APAC-deployed virtual patrol platform integrating live CCTV monitoring with AI-assisted security workflows",
     },
 
     {
@@ -179,7 +179,7 @@ export const resumeData = {
         "Supabase",
         "WebSockets",
       ],
-      link: "https://beyondsensor.com/products/beyondsecure/",
+      link: "https://beyondsensor.com/automating-visitor-management-on-site/",
       image: "/secure.png",
       category: "Security Technology",
       shortDescription:
@@ -208,7 +208,7 @@ export const resumeData = {
         "Supabase",
         "Data Visualization",
       ],
-      link: "https://beyondsensor.com/#",
+      link: "https://beyondsensor.com/news-and-insights/",
       image: "/license.png",
       category: "Enterprise Systems",
       shortDescription:
